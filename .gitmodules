@@ -7,10 +7,12 @@
 	path = wownero
 	url = https://codeberg.org/wownero/wownero
 	shallow = true
+	branch = v0.11.3.0
 [submodule "zano"]
 	path = zano
 	url = https://github.com/hyle-team/zano
-	shallow = false
+	branch = v2.1.7.424
+	shallow = true
 [submodule "wownero_libwallet2_api_c/wownero-seed"]
 	path = wownero_libwallet2_api_c/wownero-seed
 	url = https://github.com/MrCyjaneK/wownero-seed
