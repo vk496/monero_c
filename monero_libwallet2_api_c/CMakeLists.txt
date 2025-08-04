@@ -9,6 +9,15 @@ set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 # set(CMAKE_INTERPROCEDURAL_OPTIMIZATION FALSE)
 # set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fno-lto")
 
+
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Qn")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Qn")
+
+# Fix reproducibility by avoiding dynamic rev-parse tag being hardcoded
+set(CMAKE_DISABLE_FIND_PACKAGE_GIT TRUE)
+set(CMAKE_DISABLE_FIND_PACKAGE_Git TRUE)
+
+
 if(${HOST_ABI} STREQUAL "x86_64-w64-mingw32")
     set(CMAKE_SYSTEM_NAME Windows)
     set(CMAKE_LINKER "x86_64-w64-mingw32-ld")
